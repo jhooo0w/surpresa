@@ -1,0 +1,171 @@
+/* Resetando alguns estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    font-size: 40px; /* Aumenta o tamanho da fonte */
+    font-family: 'Georgia', serif; /* Usar uma fonte serifada mais sofisticada */
+    font-weight: bold; /* Deixa a fonte mais forte */
+    color: #ff66b2; /* Cor rosa (rosa suave) */
+    text-transform: uppercase; /* Torna o texto em maiúsculas */
+    letter-spacing: 3px; /* Espaçamento entre as letras */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra sutil ao texto */
+    border-bottom: 2px solid #ff66b2; /* Linha de destaque abaixo do título */
+    padding-bottom: 10px; /* Espaço abaixo da linha */
+}
+
+
+
+/* Corpo e fundo da página */
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Ajustado para que as imagens fiquem mais no centro da tela */
+    align-items: center;
+    flex-direction: column; /* Organiza tudo em uma coluna */
+    height: 100vh;
+    margin: 0;
+    color: white; /* Texto branco para contraste */
+    padding-top: 50px; /* Adiciona espaço no topo da página */
+}
+
+/* Container centralizado */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para colocar tudo em uma coluna */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Caixa das imagens */
+.image-box {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden; /* Esconde partes das imagens que ultrapassam o contêiner */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Adiciona espaço acima da caixa de imagens */
+    margin-bottom: 30px; /* Espaçamento entre as imagens e o título */
+}
+
+/* Estilo das imagens */
+.image {
+    width: 100%;
+    height: 100%; /* Garantir que a imagem preencha toda a altura disponível */
+    object-fit: contain; /* Ajusta a imagem para não ser cortada, mantendo a proporção */
+    display: block;
+}
+
+/* Controles de navegação */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para a seção de motivos */
+.motivos {
+    text-align: center;
+    margin-top: 20px; /* Espaço acima da seção de motivos */
+}
+
+.motivos h2 {
+    font-size: 40px; /* Aumenta o tamanho da fonte */
+    font-family: 'Georgia', serif; /* Usar uma fonte serifada mais sofisticada */
+    font-weight: bold; /* Deixa a fonte mais forte */
+    color: #ff66b2; /* Cor rosa (rosa suave) */
+    text-transform: uppercase; /* Torna o texto em maiúsculas */
+    letter-spacing: 3px; /* Espaçamento entre as letras */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra sutil ao texto */
+    border-bottom: 2px solid #ff66b2; /* Linha de destaque abaixo do título */
+    padding-bottom: 10px; /* Espaço abaixo da linha */
+}
+
+.motivos ul {
+    list-style-type: none; /* Remove a numeração padrão */
+    padding-left: 0;
+    counter-reset: list-counter; /* Reseta o contador para numerar as li's */
+    text-align: left; /* Alinha os itens à esquerda */
+    margin: 0 auto;
+    width: 80%; /* Ajusta a largura para a lista */
+}
+
+.motivos li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative; /* Necessário para posicionar o número */
+    padding-left: 30px; /* Espaçamento à esquerda para o número */
+}
+
+.motivos li::before {
+    content: counter(list-counter) ". "; /* Adiciona o número antes do item */
+    counter-increment: list-counter; /* Incrementa o contador automaticamente */
+    position: absolute;
+    left: 0;
+    font-size: 18px; /* Tamanho do número */
+    color: #ff66b2; /* Cor rosa para o número */
+    font-weight: bold; /* Deixa o número em negrito */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .motivos h2 {
+        font-size: 32px; /* Diminui o tamanho da fonte para telas menores */
+    }
+
+    .motivos li {
+        font-size: 16px; /* Ajusta o tamanho das li's para telas menores */
+    }
+}
+
+.watch-link {
+    display: block; /* Permite que o link seja exibido como bloco */
+    margin-top: 20px; /* Adiciona espaço entre a lista e o link */
+    font-size: 20px; /* Tamanho da fonte do link */
+    color: #ff66b2; /* Cor rosa para combinar com o título */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    font-weight: bold; /* Deixa o link em negrito */
+    padding: 10px 20px; /* Adiciona um pouco de padding ao redor do texto */
+    border: 2px solid #ff66b2; /* Adiciona uma borda rosa ao redor do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: all 0.3s ease; /* Suaviza a transição de efeitos */
+    margin-bottom: 20px;
+    
+    width: 200px; /* Define a largura fixa do link */
+    margin-left: auto; /* Alinha o link ao centro */
+    margin-right: auto; /* Alinha o link ao centro */
+}
+
+/* Efeito quando o mouse passa sobre o link */
+.watch-link:hover {
+    background-color: #ff66b2; /* Funda a cor do link com o fundo rosa quando passar o mouse */
+    color: white; /* Muda a cor do texto para branco */
+    transform: scale(1.1); /* Aumenta o link um pouco quando passar o mouse */
+}

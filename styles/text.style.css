@@ -1,0 +1,75 @@
+/* Resetando alguns estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Ajustado para que as imagens fiquem mais no centro da tela */
+    align-items: center;
+    flex-direction: column; /* Organiza tudo em uma coluna */
+    height: 100vh;
+    margin: 0;
+    color: white; /* Texto branco para contraste */
+    padding-top: 50px; /* Adiciona espaço no topo da página */
+}
+
+/* Botão de Voltar */
+.back-button {
+    position: fixed; /* Fixando o botão na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    left: 20px;   /* Distância da esquerda */
+    background-color: #ff66b2; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Padding para o botão */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold;
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s; /* Suaviza a transição de cor */
+}
+
+/* Efeito de hover para o botão */
+.back-button:hover {
+    background-color: #ff3385; /* Cor do botão ao passar o mouse */
+}
+
+
+.centralizado {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente preto */
+    padding: 30px 40px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    width: 90%; /* Largura responsiva */
+    max-width: 700px; /* Largura máxima */
+}
+
+.centralizado h1 {
+    font-size: 36px; /* Tamanho grande para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: #ff66b2; /* Cor rosa para o título */
+    text-align: center; /* Centraliza o título */
+    text-transform: uppercase; /* Deixa o título em maiúsculas */
+}
+
+.centralizado p {
+    font-size: 18px; /* Tamanho confortável para leitura */
+    line-height: 1.8; /* Maior espaçamento entre linhas para facilitar a leitura */
+    margin-bottom: 20px; /* Espaço entre os parágrafos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .centralizado h1 {
+        font-size: 28px; /* Diminui o tamanho do título em telas menores */
+    }
+
+    .centralizado p {
+        font-size: 16px; /* Diminui o tamanho do texto nos parágrafos */
+    }
+}

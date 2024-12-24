@@ -1,0 +1,91 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo da tela inteira */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Container para centralizar o link */
+.container {
+    text-align: center;
+}
+
+/* Estilos para o link Surpresa */
+.surpresa-link {
+    display: inline-block; /* Para permitir padding e outras propriedades de bloco */
+    background-color: red; /* Fundo suave em tom pastel */
+    color: white; /* Cor do texto em rosa */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    border: 2px solid #ffb3b3; /* Borda sutil em tom pastel */
+    padding: 20px 40px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    animation: wave 1.5s infinite, jump 1s infinite; /* Animações de onda e pulo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra do texto */
+}
+
+/* Efeito de hover no link */
+.surpresa-link:hover {
+    background-color: darkred; /* Muda a cor de fundo quando o mouse passa */
+    color: white; /* Muda a cor do texto */
+    border-color: white; /* Borda de cor rosa */
+}
+
+/* Animação de onda */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Faz o texto do link "subir" */
+    }
+}
+
+/* Animação de pulo */
+@keyframes jump {
+    0% {
+        transform: translateY(0); /* Posição inicial */
+    }
+    25% {
+        transform: translateY(-10px); /* Sobe um pouco */
+    }
+    50% {
+        transform: translateY(0); /* Volta à posição original */
+    }
+    75% {
+        transform: translateY(-10px); /* Sobe novamente */
+    }
+    100% {
+        transform: translateY(0); /* Volta à posição original */
+    }
+}
+
+/* Estilos para tornar o layout responsivo */
+@media (max-width: 768px) {
+    /* Em telas menores, o link fica um pouco menor */
+    .surpresa-link {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Em telas ainda menores, o link fica ainda menor e com fonte ajustada */
+    .surpresa-link {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
